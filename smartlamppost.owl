@@ -1,0 +1,327 @@
+@prefix : <http://www.semanticweb.org/def/smartLamppost#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix saref: <https://w3id.org/def/saref> .
+@prefix saref4envi: <https://w3id.org/def/saref4envi#> .
+@base <http://www.semanticweb.org/def/smartLamppost#> .
+
+<http://www.semanticweb.org/def/smartLamppost#> rdf:type owl:Ontology ;
+                                                 owl:versionInfo "v0.0.1" ;
+                                                 <http://purl.org/dc/terms/creator> "Alba Fernández Izquierdo"^^xsd:string ,
+                                                                                    "David Chaves Fraga"^^xsd:string ;
+                                                 <http://purl.org/dc/elements/1.1/title> "Smartlamppost ontology"@en ;
+                                                 <http://purl.org/vocab/vann/preferredNamespacePrefix> "smartlp"^^xsd:string .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/def/smartLamppost#contains
+:contains rdf:type owl:ObjectProperty ;
+          rdfs:label "contains"@en .
+
+
+###  http://www.semanticweb.org/def/smartLamppost#controlType
+:controlType rdf:type owl:ObjectProperty ;
+             rdfs:label "control type"@en .
+
+
+###  http://www.semanticweb.org/def/smartLamppost#emitsLight
+:emitsLight rdf:type owl:ObjectProperty ;
+            rdfs:domain :LightBulb ;
+            rdfs:range saref4envi:Light ;
+            rdfs:label "emits light"@en .
+
+
+###  http://www.semanticweb.org/def/smartLamppost#hasConsumption
+:hasConsumption rdf:type owl:ObjectProperty ;
+                rdfs:label "has consumption"@en .
+
+
+###  http://www.semanticweb.org/def/smartLamppost#hasFilter
+:hasFilter rdf:type owl:ObjectProperty ;
+           rdfs:label "has filter"@en .
+
+
+###  http://www.semanticweb.org/def/smartLamppost#hasPrice
+:hasPrice rdf:type owl:ObjectProperty ;
+          rdfs:label "has price"@en .
+
+
+###  http://www.semanticweb.org/def/smartLamppost#hasRadius
+:hasRadius rdf:type owl:ObjectProperty ;
+           rdfs:domain saref4envi:Light ;
+           rdfs:range :Radius ;
+           rdfs:label "has radius"@en .
+
+
+###  http://www.semanticweb.org/def/smartLamppost#interactsWith
+:interactsWith rdf:type owl:ObjectProperty ;
+               rdfs:label "interacts with"@en .
+
+
+###  http://www.semanticweb.org/def/smartLamppost#isProjectedFromHeight
+:isProjectedFromHeight rdf:type owl:ObjectProperty ;
+                       rdfs:domain saref4envi:Light ;
+                       rdfs:range saref4envi:HeightMeasurement ;
+                       rdfs:label "is projected from height"@en .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+rdf:type rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:ObjectProperty ;
+                                               rdfs:range [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                            owl:allValuesFrom <http://www.w3.org/2004/02/skos/core#ConceptScheme>
+                                                          ] .
+
+
+###  https://w3id.org/def/saref#isMeasuredIn
+<https://w3id.org/def/saref#isMeasuredIn> rdf:type owl:ObjectProperty ;
+                                          rdfs:label "is measured in" .
+
+
+###  https://w3id.org/def/saref4envi#hasGeometry
+saref4envi:hasGeometry rdf:type owl:ObjectProperty ;
+                       rdfs:label "has geometry" .
+
+
+###  https://w3id.org/def/saref4envi#isProjectedInDirection
+saref4envi:isProjectedInDirection rdf:type owl:ObjectProperty ;
+                                  rdfs:domain saref4envi:Light ;
+                                  rdfs:range saref4envi:CompassDirection ;
+                                  rdfs:label "is projected in direction" .
+
+
+###  https://w3id.org/def/saref4envi#projectsLight
+saref4envi:projectsLight rdf:type owl:ObjectProperty ;
+                         rdfs:domain :LightBulb ;
+                         rdfs:range saref4envi:Light ;
+                         rdfs:label "projects light" .
+
+
+###  https://w3id.org/saref#measuresProperty
+<https://w3id.org/saref#measuresProperty> rdf:type owl:ObjectProperty ;
+                                          rdfs:label "measures property" .
+
+
+###  https://w3id.org/saref4envi#hasColor
+<https://w3id.org/saref4envi#hasColor> rdf:type owl:ObjectProperty ;
+                                       rdfs:label "has color" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/def/smartLamppost#IPv6
+:IPv6 rdf:type owl:DatatypeProperty ;
+      rdfs:domain :SmartLamppost ;
+      rdfs:range rdf:PlainLiteral ;
+      rdfs:label "ipv6 address"@en .
+
+
+###  http://www.semanticweb.org/def/smartLamppost#currency
+:currency rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Price ;
+          rdfs:range rdf:PlainLiteral ;
+          rdfs:label "currency of the price"@en .
+
+
+###  http://www.semanticweb.org/def/smartLamppost#value
+:value rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Price ;
+       rdfs:range xsd:float ;
+       rdfs:label "value of the price"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/def/smartLamppost#ConsumptionValue
+:ConsumptionValue rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty <https://w3id.org/def/saref#isMeasuredIn> ;
+                                    owl:allValuesFrom <https://w3id.org/saref#UnitOfMeasure>
+                                  ] ;
+                  rdfs:label "consumption value"@en .
+
+
+###  http://www.semanticweb.org/def/smartLamppost#Filter
+:Filter rdf:type owl:Class ;
+        rdfs:label "filter"@en .
+
+
+###  http://www.semanticweb.org/def/smartLamppost#LightBulb
+:LightBulb rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty rdf:type ;
+                             owl:someValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasConsumption ;
+                             owl:allValuesFrom :ConsumptionValue
+                           ] ;
+           rdfs:label "Lightbulb"@en .
+
+
+###  http://www.semanticweb.org/def/smartLamppost#Price
+:Price rdf:type owl:Class ;
+       rdfs:label "price"@en .
+
+
+###  http://www.semanticweb.org/def/smartLamppost#ProximityProperty
+:ProximityProperty rdf:type owl:Class ;
+                   rdfs:subClassOf <https://w3id.org/saref#Property> ;
+                   rdfs:label "proximity"@en .
+
+
+###  http://www.semanticweb.org/def/smartLamppost#ProximitySensor
+:ProximitySensor rdf:type owl:Class ;
+                 rdfs:subClassOf saref4envi:Sensor ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <https://w3id.org/saref#measuresProperty> ;
+                                   owl:someValuesFrom :ProximityProperty
+                                 ] ;
+                 rdfs:label "proximity sensor"@en .
+
+
+###  http://www.semanticweb.org/def/smartLamppost#Radius
+:Radius rdf:type owl:Class ;
+        rdfs:label "radius of the scope of the light"@en .
+
+
+###  http://www.semanticweb.org/def/smartLamppost#SmartLamppost
+:SmartLamppost rdf:type owl:Class ;
+               rdfs:subClassOf saref4envi:Lamppost ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :contains ;
+                                 owl:someValuesFrom :LightBulb
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :controlType ;
+                                 owl:someValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :interactsWith ;
+                                 owl:someValuesFrom :SmartLamppost
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :interactsWith ;
+                                 owl:someValuesFrom saref4envi:Sensor
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasPrice ;
+                                 owl:allValuesFrom :Price
+                               ] ;
+               rdfs:label "smart lamppost"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/saref4envi#Color
+saref4envi:Color rdf:type owl:Class .
+
+
+###  https://w3id.org/def/saref4envi#CompassDirection
+saref4envi:CompassDirection rdf:type owl:Class .
+
+
+###  https://w3id.org/def/saref4envi#Geometry
+saref4envi:Geometry rdf:type owl:Class .
+
+
+###  https://w3id.org/def/saref4envi#HeightMeasurement
+saref4envi:HeightMeasurement rdf:type owl:Class .
+
+
+###  https://w3id.org/def/saref4envi#Lamppost
+saref4envi:Lamppost rdf:type owl:Class ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty saref4envi:projectsLight ;
+                                      owl:allValuesFrom saref4envi:Light
+                                    ] .
+
+
+###  https://w3id.org/def/saref4envi#Light
+saref4envi:Light rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasFilter ;
+                                   owl:someValuesFrom :Filter
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasRadius ;
+                                   owl:allValuesFrom :Radius
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :isProjectedFromHeight ;
+                                   owl:allValuesFrom saref4envi:HeightMeasurement
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty saref4envi:hasGeometry ;
+                                   owl:allValuesFrom saref4envi:Geometry
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty saref4envi:isProjectedInDirection ;
+                                   owl:allValuesFrom saref4envi:CompassDirection
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <https://w3id.org/saref4envi#hasColor> ;
+                                   owl:allValuesFrom saref4envi:Color
+                                 ] .
+
+
+###  https://w3id.org/def/saref4envi#LightProperty
+saref4envi:LightProperty rdf:type owl:Class ;
+                         rdfs:subClassOf <https://w3id.org/saref#Property> .
+
+
+###  https://w3id.org/def/saref4envi#Photometer
+saref4envi:Photometer rdf:type owl:Class ;
+                      rdfs:subClassOf saref4envi:Sensor ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty <https://w3id.org/saref#measuresProperty> ;
+                                        owl:allValuesFrom saref4envi:LightProperty
+                                      ] .
+
+
+###  https://w3id.org/def/saref4envi#Sensor
+saref4envi:Sensor rdf:type owl:Class .
+
+
+###  https://w3id.org/saref#Property
+<https://w3id.org/saref#Property> rdf:type owl:Class .
+
+
+###  https://w3id.org/saref#UnitOfMeasure
+<https://w3id.org/saref#UnitOfMeasure> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara
+<http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/tipo-lampara> rdf:type owl:NamedIndividual ,
+                                                                                                                  <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+###  http://www.semanticweb.org/def/smartLamppost#Distance
+:Distance rdf:type owl:NamedIndividual ,
+                   <https://w3id.org/saref#Property> .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
