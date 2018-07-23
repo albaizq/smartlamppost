@@ -1,0 +1,47 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "saref4envi:CompassDirection" "smartlp^^http://www.w3.org/2001/XMLSchema#string:ProximityProperty" "smartlp^^http://www.w3.org/2001/XMLSchema#string:Radius" "saref4envi:Color" "smartlp^^http://www.w3.org/2001/XMLSchema#string:SmartLamppost" "saref4envi:Light" "saref4envi:LightProperty" "smartlp^^http://www.w3.org/2001/XMLSchema#string:Filter" ":ConceptScheme" "saref4envi:Geometry" "saref4envi:HeightMeasurement" ":Concept" ":UnitOfMeasure" "smartlp^^http://www.w3.org/2001/XMLSchema#string:ConsumptionValue" "smartlp^^http://www.w3.org/2001/XMLSchema#string:Price" "smartlp^^http://www.w3.org/2001/XMLSchema#string:LightBulb" "saref4envi:Sensor" ; /*classes style*/
+	"NULL" -> ":ConceptScheme" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "smartlp^^http://www.w3.org/2001/XMLSchema#string:interactsWith" [ label = "owl:onProperty" ];
+	"NULL" -> "saref4envi:CompassDirection" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "smartlp^^http://www.w3.org/2001/XMLSchema#string:SmartLamppost" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "smartlp^^http://www.w3.org/2001/XMLSchema#string:ProximityProperty" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "saref4envi:Sensor" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "saref4envi:Light" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "smartlp^^http://www.w3.org/2001/XMLSchema#string:isProjectedFromHeight" [ label = "owl:onProperty" ];
+	"NULL" -> "https://w3id.org/saref4envi#hasColor" [ label = "owl:onProperty" ];
+	"NULL" -> "https://w3id.org/def/saref#isMeasuredIn" [ label = "owl:onProperty" ];
+	"NULL" -> "smartlp^^http://www.w3.org/2001/XMLSchema#string:ConsumptionValue" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "smartlp^^http://www.w3.org/2001/XMLSchema#string:contains" [ label = "owl:onProperty" ];
+	"NULL" -> "rdf:type" [ label = "owl:onProperty" ];
+	"NULL" -> "saref4envi:projectsLight" [ label = "owl:onProperty" ];
+	"NULL" -> "saref4envi:HeightMeasurement" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "smartlp^^http://www.w3.org/2001/XMLSchema#string:Radius" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "smartlp^^http://www.w3.org/2001/XMLSchema#string:Filter" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "smartlp^^http://www.w3.org/2001/XMLSchema#string:hasPrice" [ label = "owl:onProperty" ];
+	"NULL" -> "saref4envi:LightProperty" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "smartlp^^http://www.w3.org/2001/XMLSchema#string:LightBulb" [ label = "owl:someValuesFrom" ];
+	"NULL" -> ":UnitOfMeasure" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "smartlp^^http://www.w3.org/2001/XMLSchema#string:hasConsumption" [ label = "owl:onProperty" ];
+	"NULL" -> ":Concept" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "saref4envi:Geometry" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "smartlp^^http://www.w3.org/2001/XMLSchema#string:controlType" [ label = "owl:onProperty" ];
+	"NULL" -> "smartlp^^http://www.w3.org/2001/XMLSchema#string:Price" [ label = "owl:allValuesFrom" ];
+	"NULL" -> ":measuresProperty" [ label = "owl:onProperty" ];
+	"NULL" -> "saref4envi:hasGeometry" [ label = "owl:onProperty" ];
+	"NULL" -> "saref4envi:isProjectedInDirection" [ label = "owl:onProperty" ];
+	"NULL" -> "smartlp^^http://www.w3.org/2001/XMLSchema#string:hasFilter" [ label = "owl:onProperty" ];
+	"NULL" -> "saref4envi:Color" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "smartlp^^http://www.w3.org/2001/XMLSchema#string:hasRadius" [ label = "owl:onProperty" ];
+	"NULL" -> ":inScheme" [ label = "owl:onProperty" ];
+	"smartlp^^http://www.w3.org/2001/XMLSchema#string:LightBulb" -> "saref4envi:Light" [ label = "smartlp^^http://www.w3.org/2001/XMLSchema#string:emitsLight" ];
+	"saref4envi:Light" -> "smartlp^^http://www.w3.org/2001/XMLSchema#string:Radius" [ label = "smartlp^^http://www.w3.org/2001/XMLSchema#string:hasRadius" ];
+	"smartlp^^http://www.w3.org/2001/XMLSchema#string:SmartLamppost" -> "rdf:PlainLiteral" [ label = "smartlp^^http://www.w3.org/2001/XMLSchema#string:IPv6" ];
+	"smartlp^^http://www.w3.org/2001/XMLSchema#string:Price" -> "rdf:PlainLiteral" [ label = "smartlp^^http://www.w3.org/2001/XMLSchema#string:currency" ];
+	"saref4envi:Light" -> "saref4envi:CompassDirection" [ label = "saref4envi:isProjectedInDirection" ];
+	"smartlp^^http://www.w3.org/2001/XMLSchema#string:LightBulb" -> "saref4envi:Light" [ label = "saref4envi:projectsLight" ];
+	"saref4envi:Light" -> "saref4envi:HeightMeasurement" [ label = "smartlp^^http://www.w3.org/2001/XMLSchema#string:isProjectedFromHeight" ];
+	"smartlp^^http://www.w3.org/2001/XMLSchema#string:Price" -> "xsd:float" [ label = "smartlp^^http://www.w3.org/2001/XMLSchema#string:value" ];
+
+}
