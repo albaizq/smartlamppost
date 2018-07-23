@@ -1,0 +1,162 @@
+{
+  "@context" : {
+    "IPv6" : {
+      "@id" : "http://www.semanticweb.org/def/smartLamppost#IPv6",
+      "@type" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "LightBulb" : {
+      "@id" : "http://www.semanticweb.org/def/smartLamppost#LightBulb"
+    },
+    "UnitOfMeasure" : {
+      "@id" : "https://w3id.org/saref#UnitOfMeasure"
+    },
+    "hasPrice" : {
+      "@id" : "http://www.semanticweb.org/def/smartLamppost#hasPrice",
+      "@type" : "@id"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "Filter" : {
+      "@id" : "http://www.semanticweb.org/def/smartLamppost#Filter"
+    },
+    "Photometer" : {
+      "@id" : "https://w3id.org/def/saref4envi#Photometer"
+    },
+    "CompassDirection" : {
+      "@id" : "https://w3id.org/def/saref4envi#CompassDirection"
+    },
+    "SmartLamppost" : {
+      "@id" : "http://www.semanticweb.org/def/smartLamppost#SmartLamppost"
+    },
+    "hasRadius" : {
+      "@id" : "http://www.semanticweb.org/def/smartLamppost#hasRadius",
+      "@type" : "@id"
+    },
+    "measuresProperty" : {
+      "@id" : "https://w3id.org/saref#measuresProperty",
+      "@type" : "@id"
+    },
+    "Geometry" : {
+      "@id" : "https://w3id.org/def/saref4envi#Geometry"
+    },
+    "hasFilter" : {
+      "@id" : "http://www.semanticweb.org/def/smartLamppost#hasFilter",
+      "@type" : "@id"
+    },
+    "currency" : {
+      "@id" : "http://www.semanticweb.org/def/smartLamppost#currency",
+      "@type" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "contains" : {
+      "@id" : "http://www.semanticweb.org/def/smartLamppost#contains",
+      "@type" : "@id"
+    },
+    "Concept" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "hasColor" : {
+      "@id" : "https://w3id.org/saref4envi#hasColor",
+      "@type" : "@id"
+    },
+    "HeightMeasurement" : {
+      "@id" : "https://w3id.org/def/saref4envi#HeightMeasurement"
+    },
+    "ConsumptionValue" : {
+      "@id" : "http://www.semanticweb.org/def/smartLamppost#ConsumptionValue"
+    },
+    "isProjectedInDirection" : {
+      "@id" : "https://w3id.org/def/saref4envi#isProjectedInDirection",
+      "@type" : "@id"
+    },
+    "Light" : {
+      "@id" : "https://w3id.org/def/saref4envi#Light"
+    },
+    "projectsLight" : {
+      "@id" : "https://w3id.org/def/saref4envi#projectsLight",
+      "@type" : "@id"
+    },
+    "Price" : {
+      "@id" : "http://www.semanticweb.org/def/smartLamppost#Price"
+    },
+    "Lamppost" : {
+      "@id" : "https://w3id.org/def/saref4envi#Lamppost"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "value" : {
+      "@id" : "http://www.semanticweb.org/def/smartLamppost#value",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "controlType" : {
+      "@id" : "http://www.semanticweb.org/def/smartLamppost#controlType",
+      "@type" : "@id"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "hasConsumption" : {
+      "@id" : "http://www.semanticweb.org/def/smartLamppost#hasConsumption",
+      "@type" : "@id"
+    },
+    "isProjectedFromHeight" : {
+      "@id" : "http://www.semanticweb.org/def/smartLamppost#isProjectedFromHeight",
+      "@type" : "@id"
+    },
+    "ConceptScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    },
+    "hasGeometry" : {
+      "@id" : "https://w3id.org/def/saref4envi#hasGeometry",
+      "@type" : "@id"
+    },
+    "interactsWith" : {
+      "@id" : "http://www.semanticweb.org/def/smartLamppost#interactsWith",
+      "@type" : "@id"
+    },
+    "Property" : {
+      "@id" : "https://w3id.org/saref#Property"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "type" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "@type" : "@id"
+    },
+    "isMeasuredIn" : {
+      "@id" : "https://w3id.org/def/saref#isMeasuredIn",
+      "@type" : "@id"
+    },
+    "ProximitySensor" : {
+      "@id" : "http://www.semanticweb.org/def/smartLamppost#ProximitySensor"
+    },
+    "ProximityProperty" : {
+      "@id" : "http://www.semanticweb.org/def/smartLamppost#ProximityProperty"
+    },
+    "LightProperty" : {
+      "@id" : "https://w3id.org/def/saref4envi#LightProperty"
+    },
+    "Radius" : {
+      "@id" : "http://www.semanticweb.org/def/smartLamppost#Radius"
+    },
+    "Color" : {
+      "@id" : "https://w3id.org/def/saref4envi#Color"
+    },
+    "inScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+      "@type" : "@id"
+    },
+    "emitsLight" : {
+      "@id" : "http://www.semanticweb.org/def/smartLamppost#emitsLight",
+      "@type" : "@id"
+    },
+    "Sensor" : {
+      "@id" : "https://w3id.org/def/saref4envi#Sensor"
+    }
+  }
+}
