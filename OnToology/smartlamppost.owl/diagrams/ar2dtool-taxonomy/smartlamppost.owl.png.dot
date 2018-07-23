@@ -1,0 +1,11 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "smartlp^^http://www.w3.org/2001/XMLSchema#string:ProximityProperty" "saref4envi:Photometer" "smartlp^^http://www.w3.org/2001/XMLSchema#string:SmartLamppost" ":Property" "smartlp^^http://www.w3.org/2001/XMLSchema#string:ProximitySensor" "saref4envi:Lamppost" "saref4envi:LightProperty" "saref4envi:Sensor" ; /*classes style*/
+	"smartlp^^http://www.w3.org/2001/XMLSchema#string:ProximityProperty" -> ":Property" [ label = "rdfs:subClassOf" ];
+	"smartlp^^http://www.w3.org/2001/XMLSchema#string:ProximitySensor" -> "saref4envi:Sensor" [ label = "rdfs:subClassOf" ];
+	"smartlp^^http://www.w3.org/2001/XMLSchema#string:SmartLamppost" -> "saref4envi:Lamppost" [ label = "rdfs:subClassOf" ];
+	"saref4envi:LightProperty" -> ":Property" [ label = "rdfs:subClassOf" ];
+	"saref4envi:Photometer" -> "saref4envi:Sensor" [ label = "rdfs:subClassOf" ];
+
+}
