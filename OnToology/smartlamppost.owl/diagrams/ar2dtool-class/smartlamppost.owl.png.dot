@@ -22,8 +22,8 @@ node [shape = rectangle, color="orange"]; "saref4envi:CompassDirection" "smartlp
 	"NULL" -> "smartlp^^http://www.w3.org/2001/XMLSchema#string:hasPrice" [ label = "owl:onProperty" ];
 	"NULL" -> "saref4envi:LightProperty" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "smartlp^^http://www.w3.org/2001/XMLSchema#string:LightBulb" [ label = "owl:someValuesFrom" ];
-	"NULL" -> ":UnitOfMeasure" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "smartlp^^http://www.w3.org/2001/XMLSchema#string:hasConsumption" [ label = "owl:onProperty" ];
+	"NULL" -> ":UnitOfMeasure" [ label = "owl:allValuesFrom" ];
 	"NULL" -> ":Concept" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "saref4envi:Geometry" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "smartlp^^http://www.w3.org/2001/XMLSchema#string:controlType" [ label = "owl:onProperty" ];
@@ -32,8 +32,8 @@ node [shape = rectangle, color="orange"]; "saref4envi:CompassDirection" "smartlp
 	"NULL" -> "saref4envi:hasGeometry" [ label = "owl:onProperty" ];
 	"NULL" -> "saref4envi:isProjectedInDirection" [ label = "owl:onProperty" ];
 	"NULL" -> "smartlp^^http://www.w3.org/2001/XMLSchema#string:hasFilter" [ label = "owl:onProperty" ];
-	"NULL" -> "saref4envi:Color" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "smartlp^^http://www.w3.org/2001/XMLSchema#string:hasRadius" [ label = "owl:onProperty" ];
+	"NULL" -> "saref4envi:Color" [ label = "owl:allValuesFrom" ];
 	"NULL" -> ":inScheme" [ label = "owl:onProperty" ];
 	"smartlp^^http://www.w3.org/2001/XMLSchema#string:LightBulb" -> "saref4envi:Light" [ label = "smartlp^^http://www.w3.org/2001/XMLSchema#string:emitsLight" ];
 	"saref4envi:Light" -> "smartlp^^http://www.w3.org/2001/XMLSchema#string:Radius" [ label = "smartlp^^http://www.w3.org/2001/XMLSchema#string:hasRadius" ];
